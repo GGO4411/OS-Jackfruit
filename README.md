@@ -4,8 +4,8 @@
 
 | Name | SRN |
 |------|-----|
-| [Gandhar Sameer Gokhale ] | [PES1UG24CS167] |
-| [Deeptha S] | [PES1UG24CS144] |
+| Gandhar Sameer Gokhale  | PES1UG24CS167 |
+| Deeptha S | PES1UG24CS144 |
 
 ---
 
