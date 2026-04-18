@@ -4,8 +4,8 @@
 
 | Name | SRN |
 |------|-----|
-| [Team Member 1] | [SRN 1] |
-| [Team Member 2] | [SRN 2] |
+| [Gandhar Sameer Gokhale ] | [PES1UG24CS167] |
+| [Deeptha S] | [PES1UG24CS144] |
 
 ---
 
