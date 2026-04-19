@@ -184,7 +184,6 @@ sudo dmesg | grep "SOFT LIMIT"
 
 **Output:**
 ```
-[PASTE YOUR DMESG SOFT LIMIT LINE HERE]
 e.g.: [container_monitor] SOFT LIMIT container=alpha pid=XXXXX rss=21233664 limit=20971520
 ```
 
@@ -260,6 +259,8 @@ vboxuser  39406  0.0  0.0  17820  2376 pts/3  S+  04:23  0:00 grep --color=auto 
 
 [30540.346342] [container_monitor] Module unloaded.
 ```
+
+<img src="Screenshots/5.png" width="900"/>
 
 ---
 
