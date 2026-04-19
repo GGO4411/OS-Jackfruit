@@ -99,7 +99,7 @@ sudo ./engine ps
 
 **Output:**
 ```
-[PASTE YOUR ENGINE PS OUTPUT HERE SHOWING BOTH CONTAINERS RUNNING]
+![Screenshot](Screenshots/Picture1.png)
 ```
 
 ---
@@ -118,7 +118,9 @@ ID               PID      STATE      SOFT(MiB)    HARD(MiB)    STARTED
 beta             39385    exited     40           64           04:22:38
 alpha            39377    exited     40           64           04:22:38
 ```
-
+```
+![Screenshot](Screenshots/Picture2.png)
+```
 ---
 
 ### Screenshot 3 — Bounded-buffer logging
@@ -139,7 +141,9 @@ cpu_hog alive elapsed=3 accumulator=8332236641900565882
 ...
 cpu_hog done duration=10 accumulator=3881864451831360265
 ```
-
+```
+![Screenshot](Screenshots/Picture3.png)
+```
 *Each line was read from the container's stdout pipe by a producer thread, inserted into the bounded buffer, and written to `logs/alpha.log` by the consumer thread.*
 
 ---
@@ -162,6 +166,9 @@ ID               PID      STATE      SOFT(MiB)    HARD(MiB)    STARTED
 alpha            39377    stopped    48           80           04:22:38
 ```
 
+```
+![Screenshot](Screenshots/Picture4.png)
+```
 *The CLI process connects to `/tmp/mini_runtime.sock`, sends a `control_request_t` struct, and the supervisor responds with a `control_response_t`. This is a separate IPC path from the logging pipes.*
 
 ---
@@ -180,7 +187,9 @@ sudo dmesg | grep "SOFT LIMIT"
 [PASTE YOUR DMESG SOFT LIMIT LINE HERE]
 e.g.: [container_monitor] SOFT LIMIT container=alpha pid=XXXXX rss=21233664 limit=20971520
 ```
-
+```
+![Screenshot](Screenshots/Picture5.png)
+```
 ---
 
 ### Screenshot 6 — Hard-limit enforcement
