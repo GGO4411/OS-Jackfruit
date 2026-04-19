@@ -99,7 +99,7 @@ sudo ./engine ps
 
 **Output:**
 
-<img src="Screenshots/1.png" width="900"/>
+<img src="Screenshots/1_new.png" width="900"/>
 
 
 ---
@@ -119,7 +119,7 @@ beta             39385    exited     40           64           04:22:38
 alpha            39377    exited     40           64           04:22:38
 ```
 
-<img src="Screenshots/1.png" width="900"/>
+<img src="Screenshots/1_new.png" width="900"/>
 
 ---
 
