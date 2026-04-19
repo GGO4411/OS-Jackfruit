@@ -119,7 +119,7 @@ beta             39385    exited     40           64           04:22:38
 alpha            39377    exited     40           64           04:22:38
 ```
 
-<img src="Screenshots/Picture2.png" width="900"/>
+<img src="Screenshots/Picture1.png" width="900"/>
 
 ---
 
@@ -142,7 +142,7 @@ cpu_hog alive elapsed=3 accumulator=8332236641900565882
 cpu_hog done duration=10 accumulator=3881864451831360265
 ```
 
-<img src="Screenshots/Picture3.png" width="900"/>
+<img src="Screenshots/Picture2.png" width="900"/>
 
 *Each line was read from the container's stdout pipe by a producer thread, inserted into the bounded buffer, and written to `logs/alpha.log` by the consumer thread.*
 
@@ -167,7 +167,7 @@ alpha            39377    stopped    48           80           04:22:38
 ```
 
 
-<img src="Screenshots/Picture4.png" width="900"/>
+<img src="Screenshots/Picture3.png" width="900"/>
 
 *The CLI process connects to `/tmp/mini_runtime.sock`, sends a `control_request_t` struct, and the supervisor responds with a `control_response_t`. This is a separate IPC path from the logging pipes.*
 
@@ -188,7 +188,7 @@ sudo dmesg | grep "SOFT LIMIT"
 e.g.: [container_monitor] SOFT LIMIT container=alpha pid=XXXXX rss=21233664 limit=20971520
 ```
 
-<img src="Screenshots/Picture5.png" width="900"/>
+<img src="Screenshots/Picture4.png" width="900"/>
 
 ---
 
@@ -214,6 +214,8 @@ Container 'alpha' exited: state=killed exit_code=137
 ID               PID      STATE      SOFT(MiB)    HARD(MiB)    STARTED
 alpha            38997    killed     10           20           03:39:14
 ```
+
+<img src="Screenshots/Picture5.png" width="900"/>
 
 *exit_code=137 = 128 + SIGKILL. The `stop_requested` flag was not set, so the supervisor correctly classified this as `killed` rather than `stopped`.*
 
