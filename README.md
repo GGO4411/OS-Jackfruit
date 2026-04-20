@@ -239,7 +239,8 @@ top -d 1 -n 8
 
 *alpha (NI=0) received 100% CPU while beta (NI=10) received only 62.9% — a 37% reduction in CPU share due to the lower scheduling weight assigned by Linux CFS to higher nice values.*
 
-<img width="1849" height="922" alt="image" src="https://github.com/user-attachments/assets/9af47c0c-6113-4588-a3eb-69d894648642" />
+<img width="1569" height="762" alt="image" src="https://github.com/user-attachments/assets/b2ddd1b6-9111-4b3a-b14e-1afc51ff5760" />
+
 
 
 ---
