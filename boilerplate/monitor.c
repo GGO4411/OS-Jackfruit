@@ -142,7 +142,7 @@ static void timer_callback(struct timer_list *t)
         rss = get_rss_bytes(entry->pid);
 
         /* Process no longer exists — clean up the entry */
-        if (rss < 0) {
+        if (rss < 0) { //if rss<0 remove from memory
             printk(KERN_INFO
                    "[container_monitor] PID %d (%s) exited, removing entry\n",
                    entry->pid, entry->container_id);
@@ -174,7 +174,7 @@ static void timer_callback(struct timer_list *t)
 }
 
 /* ---------------------------------------------------------------
- * IOCTL Handler
+ * IOCTL Handler--communication to user space
  * --------------------------------------------------------------- */
 static long monitor_ioctl(struct file *f, unsigned int cmd, unsigned long arg)
 {
