@@ -1,5 +1,9 @@
 /*
  * engine.c - Supervised Multi-Container Runtime (User Space)
+Accepts CLI commands
+Talks to supervisor via socket
+Creates containers using clone()
+Manages logs, lifecycle, and metadata
  */
 
 #define _GNU_SOURCE
