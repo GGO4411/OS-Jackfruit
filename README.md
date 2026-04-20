@@ -112,7 +112,7 @@ sudo ./engine ps
 sudo ./engine ps
 ```
 
-**Output:**
+**Output Example:**
 ```
 ID               PID      STATE      SOFT(MiB)    HARD(MiB)    STARTED
 beta             39385    exited     40           64           04:22:38
@@ -133,7 +133,7 @@ sleep 3
 sudo ./engine logs alpha
 ```
 
-**Output:**
+**Output Example:**
 ```
 cpu_hog alive elapsed=1 accumulator=1683001851469624645
 cpu_hog alive elapsed=2 accumulator=17600488247000144240
@@ -158,7 +158,7 @@ sudo ./engine stop alpha
 sudo ./engine ps
 ```
 
-**Output:**
+**Output Example:**
 ```
 Started container 'alpha' with PID 39377
 Sent SIGTERM to 'alpha' (PID 39377)
@@ -182,7 +182,7 @@ sudo ./engine run alpha ./rootfs-alpha /memory_hog --soft-mib 20 --hard-mib 64
 sudo dmesg | grep "SOFT LIMIT"
 ```
 
-**Output:**
+**Output Example:**
 ```
 e.g.: [container_monitor] SOFT LIMIT container=alpha pid=XXXXX rss=21233664 limit=20971520
 ```
@@ -201,7 +201,7 @@ sudo dmesg | grep container_monitor | tail -5
 sudo ./engine ps
 ```
 
-**Output:**
+**Output Example:**
 ```
 Started container 'alpha' with PID 38997
 Container 'alpha' exited: state=killed exit_code=137
@@ -230,7 +230,7 @@ sudo ./engine start beta  ./rootfs-beta  /cpu_hog --nice 10
 top -d 1 -n 8
 ```
 
-**Output:**
+**Output Example:**
 ```
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+  COMMAND
   39377 root      20   0    1012    728    680 R 100.0   0.0   0:07.59  cpu_hog
@@ -256,7 +256,7 @@ sudo rmmod monitor
 sudo dmesg | tail -3
 ```
 
-**Output:**
+**Output Example:**
 ```
 # grep defunct returns only the grep process itself — no zombies:
 vboxuser  39406  0.0  0.0  17820  2376 pts/3  S+  04:23  0:00 grep --color=auto defunct
